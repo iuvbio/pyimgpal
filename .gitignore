@@ -1,0 +1,8 @@
+
+# directories
+*.egg-info/
+__pycache__/
+
+# files
+sratch*
+palette*

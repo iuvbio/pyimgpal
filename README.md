@@ -3,6 +3,21 @@ pyimgpal
 
 A simple script to create a 16 colour scheme from an image.
 
+Usage
+---
+
+```
+Usage: pyimgpal [OPTIONS] IMAGE_PATH
+
+Options:
+  -o, --outfile FILENAME
+  -f, --format [rgb|hex]
+  --adjusted / --unadjusted  [default: True]
+  -p, --add-prefix           [default: False]
+  -nl, --new-lines           [default: False]
+  --help                     Show this message and exit.
+```
+
 About
 ---
 

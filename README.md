@@ -7,7 +7,7 @@ Usage
 ---
 
 ```
-Usage: pyimgpal [OPTIONS] IMAGE_PATH
+pyimgpal [OPTIONS] IMAGE_PATH
 
 Options:
   -o, --outfile FILENAME
@@ -15,7 +15,6 @@ Options:
   --adjusted / --unadjusted  [default: True]
   -p, --add-prefix           [default: False]
   -nl, --new-lines           [default: False]
-  --help                     Show this message and exit.
 ```
 
 About

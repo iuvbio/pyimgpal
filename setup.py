@@ -22,6 +22,6 @@ setup(
     install_requires=dependencies,
     py_modules=['imgpal'],
     entry_points={
-        'console_scripts': 'pyimgpal=imgpal:main'
+        'console_scripts': 'imgpal=imgpal:main'
     },
 )

@@ -14,11 +14,11 @@ Options:
   --help                     Show this message and exit.
 """
 import argparse
-import click
 import colorsys
 import heapq
 import math
 
+import click
 from PIL import Image
 
 

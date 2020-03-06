@@ -16,7 +16,6 @@ setup(
     url='',
     license='',
     author='iuvbio',
-    author_email='cryptodemigod@protonmail.com',
     description='A simple script to create a 16 colour scheme from an image.',
     long_description=long_description,
     install_requires=dependencies,

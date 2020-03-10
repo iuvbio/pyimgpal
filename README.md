@@ -6,8 +6,10 @@ A simple script to create a 16 colour scheme from an image.
 Usage
 ---
 
+The primary purpose of this script is to create a colour palette that can be used as input to `dconf` as the value on the 'palette' key on a gnome-terminal profile. `dconf` expects either hex values formatted as '#000000' or rgb value formatted as 'rgb(r,g,b)', to create the palette in that format, run `imgpal` with the `-p` option and `-f hex` for hex (rgb is the default).
+
 ```
-pyimgpal [OPTIONS] IMAGE_PATH
+imgpal [OPTIONS] IMAGE_PATH
 
 Options:
   -o, --outfile FILENAME

@@ -80,7 +80,7 @@ def euclidean_dist(p1, p2):
     return math.sqrt(sum((p1[i] - p2[i]) ** 2 for i in range(3)))
 
 
-def get_xcolors(colors, substitution_distance=20):
+def get_xcolors(colors, substitution_distance=20, adjusted=False):
     results = []
     for crgb in canonical:
         distances = []
@@ -118,6 +118,10 @@ def get_xcolors(colors, substitution_distance=20):
                 # No substitute found, just use the best match.
                 results.append(vals[0])
 
+    if adjusted:
+        results[0] = tuple(int(v) for v in ensure_value(results[0], .0, .2))
+        results[-1] = tuple(int(v) for v in ensure_value(results[-1], .8, 1.))
+
     return results
 
 
@@ -142,11 +146,8 @@ def to_hex(rgb):
 def main(image_path, outfile, format_, adjusted, add_prefix, new_lines):
     colors = isolate_colors(image_path, 50)
     colors_deduped = dedupe(colors)
-    xcolors = get_xcolors([rbg for cnt, rbg in colors_deduped])
     # return the palette with black and white adjusted
-    if adjusted:
-        xcolors[0] = tuple(int(v) for v in ensure_value(xcolors[0], .0, .2))
-        xcolors[-1] = tuple(int(v) for v in ensure_value(xcolors[-1], .8, 1.))
+    xcolors = get_xcolors([rbg for cnt, rbg in colors_deduped], adjusted=True)
     if format_ == 'hex':
         xcolors = [to_hex(rgb) for rgb in xcolors]
     palette = xcolors
